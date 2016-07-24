@@ -204,3 +204,4 @@ C:\COLLAGE\Year_2\Semester_2\Enterprise_Computing\Assignment2\iFood\iFood\bin\Mi
 C:\COLLAGE\Year_2\Semester_2\Enterprise_Computing\Assignment2\iFood\iFood\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\COLLAGE\Year_2\Semester_2\Enterprise_Computing\Assignment2\iFood\iFood\obj\Debug\iFood.dll
 C:\COLLAGE\Year_2\Semester_2\Enterprise_Computing\Assignment2\iFood\iFood\obj\Debug\iFood.pdb
+C:\COLLAGE\Year_2\Semester_2\Enterprise_Computing\Assignment2\iFood\iFood\obj\Debug\iFood.csprojResolveAssemblyReference.cache

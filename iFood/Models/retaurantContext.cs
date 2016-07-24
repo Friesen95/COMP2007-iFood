@@ -5,12 +5,15 @@ namespace iFood.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class retaurantContext : DbContext
+    public partial class restaurantContext : DbContext
     {
-        public retaurantContext()
-            : base("name=retaurantConnection")
+        public restaurantContext()
+            : base("name=restaurantConnection")
         {
         }
+        public virtual DbSet<FoodItemModels> FoodItems { get; set; }
+        public virtual DbSet<FoodTypeModels> FoodType { get; set; }
+
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

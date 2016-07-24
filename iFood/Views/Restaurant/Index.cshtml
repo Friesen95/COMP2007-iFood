@@ -12,7 +12,7 @@
 <ul>
     @foreach (var FoodType in Model)
     {
-        <li>@Html.ActionLink(FoodType.Name, "Browse", new { FoodType = FoodTypeModels.Name })</li>
+        <li>@Html.ActionLink(FoodType.Name, "Browse", new { FoodType = FoodType.Name })</li>
     }
 </ul>
 
