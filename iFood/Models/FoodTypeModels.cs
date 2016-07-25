@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 namespace iFood.Models
 {
     public class FoodTypeModels
@@ -19,6 +20,7 @@ namespace iFood.Models
         {
             this.Name = name;
         }
+        [Key]
         public int FoodTypeId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
