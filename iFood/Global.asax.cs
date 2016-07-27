@@ -12,7 +12,9 @@ namespace iFood
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
+            System.Data.Entity.Database.SetInitializer(
+                new iFood.Models.SampleData());
+           AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

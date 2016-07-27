@@ -194,6 +194,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Dessert.jpg" />
     <Content Include="Content\Images\BrushettaWithTomatoAndBasil.png" />
+    <Content Include="Content\Images\Fried-Pork-Dumplings.jpg" />
+    <Content Include="Content\Images\Skillet-Ravioli.jpg" />
+    <Content Include="Content\Images\small-bites-spanish-tortilla.jpg" />
     <Content Include="Content\mainCourse.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />

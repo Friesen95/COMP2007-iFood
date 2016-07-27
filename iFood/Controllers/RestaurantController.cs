@@ -10,8 +10,6 @@ namespace iFood.Controllers
     public class RestaurantController : Controller
     {
         restaurantContext storeDB = new restaurantContext();
-
-
         // GET: Restaurant
         public ActionResult Index()
         {
