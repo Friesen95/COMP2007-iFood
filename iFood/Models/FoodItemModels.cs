@@ -26,7 +26,7 @@ namespace iFood.Models
         public int FoodTypeId { get; set; }
         public string Name { get; set; }
         public string description { get; set; }
-        public decimal Price { get; set; }
+        public Decimal Price { get; set; }
         public string FoodArtUrl { get; set; }
         public FoodTypeModels FoodType { get; set; }
 
