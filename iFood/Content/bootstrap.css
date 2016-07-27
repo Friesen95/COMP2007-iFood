@@ -5377,7 +5377,6 @@ a.list-group-item:focus {
 .my-div {
     background-color: rgba(255,255,255,.7);
     border-radius:10px;
-    padding-top: 2%;
 }
 
 .panel-body:before,
