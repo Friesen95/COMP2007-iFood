@@ -1,17 +1,30 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<div class="padded">
+    <div class="panel-body my-div">
+        <h2>@ViewBag.Title.</h2>
+        <h3>@ViewBag.Message</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Contact Info</div>
+                    <div class="panel-body">
+                        <address>
+                            <strong>Alex & Sam</strong>
+                            1 Georgian Drive<br />
+                            Barrie, WA 98052-6399<br />
+                            <abbr title="Phone">P:</abbr>
+                            (705)970XXXX
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+        <address>
+            <strong>Support:</strong>   <a href="mailto:sampsunny1995@gmail.com">sampsunny1995@gmail.com</a><br />
+            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@iFood.com</a>
+        </address>
+    </div>
+</div>
