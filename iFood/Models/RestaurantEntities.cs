@@ -8,6 +8,10 @@ namespace iFood.Models
 {
     public class RestaurantEntities : DbContext
     {
+        public RestaurantEntities() : base("name=restaurantConnection")
+        {
+
+        }
         public DbSet<FoodItemModels> FoodItem { get; set; }
         public DbSet<FoodTypeModels> FoodType { get; set; }
     }

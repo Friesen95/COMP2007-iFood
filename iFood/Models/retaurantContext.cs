@@ -14,10 +14,5 @@ namespace iFood.Models
         public virtual DbSet<FoodItemModels> FoodItems { get; set; }
         public virtual DbSet<FoodTypeModels> FoodType { get; set; }
 
-
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-        }
     }
 }

@@ -12,9 +12,9 @@ namespace iFood.Models
         {
             var types = new List<FoodTypeModels>
             {
-                new FoodTypeModels { Name = "Appetizer"},
-                new FoodTypeModels { Name = "Main Course" },
-                new FoodTypeModels { Name = "Desserts" },
+                new FoodTypeModels { Name = "Appetizer", Description="Something to get your Appetite up"},
+                new FoodTypeModels { Name = "Main Course", Description="The main Course" },
+                new FoodTypeModels { Name = "Desserts", Description="Something sweet that you have at the end." },
             };
 
             new List<FoodItemModels>
