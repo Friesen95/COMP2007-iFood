@@ -9,7 +9,7 @@
 <h2>Browsing Types of Food: @Model.Name</h2>
 
 <ul>
-    @foreach (var item in Model.FoodItem)
+    @foreach (FoodItemModels item in Model.FoodItems)
     {
         <li>@Html.ActionLink(item.Name,"Details",new {id = item.FoodItemModelsId})</li>
     }

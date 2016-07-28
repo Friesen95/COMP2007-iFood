@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using iFood.Models;
+using System.Diagnostics;
 
 namespace iFood.Controllers
 {
@@ -18,9 +19,10 @@ namespace iFood.Controllers
             return View(FoodType);
         }
 
-        public ActionResult Browse(string type= "Appetizer")
+        public ActionResult Browse(string FoodType)
         {
-            FoodTypeModels foodTypesModel = storeDB.FoodTypes.Include("FoodItem").Single(g => g.Name == type);
+            //Debug.WriteLine(type);
+            FoodTypeModels foodTypesModel = storeDB.FoodTypes.Include("FoodItems").Single(g => g.Name == FoodType);
             return View(foodTypesModel);
         }
         public ActionResult Details(int id = 1)

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<iFood.Models.FoodTypeModels>
+﻿@using iFood.Models
+@model IEnumerable<FoodTypeModels>
 
 @{
     ViewBag.Title = "Store";
@@ -10,9 +11,9 @@
     Select from @Model.Count() different Types: 
 </p>
 <ul>
-    @foreach (var FoodType in Model)
+    @foreach (FoodTypeModels item in Model)
     {
-        <li>@Html.ActionLink(FoodType.Name, "Browse", new { FoodType = FoodType.Name })</li>
-    }
+        <li>@Html.ActionLink(item.Name,"Browse", new { FoodType = item.Name })</li>
+       }
 </ul>
 

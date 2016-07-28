@@ -21,6 +21,6 @@ namespace iFood.Models
         public virtual int FoodTypeModelsId { get; set; }
         public virtual string Name { get; set; }
         public virtual string Description { get; set; }
-        public virtual List<FoodItemModels> FoodItem { get; set; }
+        public virtual List<FoodItemModels> FoodItems { get; set; }
     }
 }

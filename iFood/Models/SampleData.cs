@@ -14,7 +14,7 @@ namespace iFood.Models
             {
                 new FoodTypeModels { Name = "Appetizer", Description="Something to get your Appetite up"},
                 new FoodTypeModels { Name = "Main Course", Description="The main Course" },
-                new FoodTypeModels { Name = "Desserts", Description="Something sweet that you have at the end." },
+                new FoodTypeModels { Name = "Desserts", Description="Something sweet that you have at the end." }
             };
 
             new List<FoodItemModels>
