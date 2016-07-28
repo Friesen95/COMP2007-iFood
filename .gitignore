@@ -5,3 +5,5 @@
 iFood/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 iFood.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.suo
+.vs/config/applicationhost.config
+.vs/config/applicationhost.config
