@@ -11,6 +11,6 @@
 <ul>
     @foreach (var item in Model.FoodItem)
     {
-        <li>@Html.ActionLink(item.Name,"Details",new {id = item.FoodId})</li>
+        <li>@Html.ActionLink(item.Name,"Details",new {id = item.FoodItemModelsId})</li>
     }
 </ul>

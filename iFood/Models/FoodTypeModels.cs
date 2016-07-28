@@ -8,24 +8,19 @@ namespace iFood.Models
 {
     public class FoodTypeModels
     {
-        /// <summary>
-        /// Empty constructor
-        /// </summary>
         public FoodTypeModels()
         {
 
         }
 
-        public FoodTypeModels(string name)
+        public FoodTypeModels(string Name)
         {
-            this.Name = name;
+            this.Name = Name;
         }
-        [Key]
-        public int FoodTypeId { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public List<FoodItemModels> FoodItem { get; set; }
-        
 
+        public virtual int FoodTypeModelsId { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Description { get; set; }
+        public virtual List<FoodItemModels> FoodItem { get; set; }
     }
 }

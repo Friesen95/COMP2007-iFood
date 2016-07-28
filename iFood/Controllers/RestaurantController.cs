@@ -9,24 +9,24 @@ namespace iFood.Controllers
 {
     public class RestaurantController : Controller
     {
-        restaurantContext storeDB = new restaurantContext();
+        private RestaurantContext storeDB = new RestaurantContext();
+
         // GET: Restaurant
         public ActionResult Index()
         {
-            List<FoodTypeModels> FoodType = storeDB.FoodType.ToList();
+            List <FoodTypeModels>FoodType = storeDB.FoodTypes.ToList();
             return View(FoodType);
         }
 
         public ActionResult Browse(string type= "Appetizer")
         {
-            FoodTypeModels foodTypesModel = storeDB.FoodType.Include("FoodItem").Single(g => g.Name == type);
+            FoodTypeModels foodTypesModel = storeDB.FoodTypes.Include("FoodItem").Single(g => g.Name == type);
             return View(foodTypesModel);
         }
-
-        public ActionResult Details(int id =1)
+        public ActionResult Details(int id = 1)
         {
-            var item = storeDB.FoodItems.Find(id);
-            return View(item);
+            FoodItemModels FoodItem = storeDB.FoodItems.Find(id);
+            return View(FoodItem);
         }
     }
 }

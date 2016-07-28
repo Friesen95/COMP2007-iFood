@@ -9,26 +9,24 @@ namespace iFood.Models
 {
     public class FoodItemModels
     {
-        /// <summary>
-        /// EMpty constructor
-        /// </summary>
         public FoodItemModels()
         {
 
         }
 
-        public FoodItemModels(String Name)
+        public FoodItemModels(string Name)
         {
             this.Name = Name;
         }
-        [Key]
-        public int FoodId { get; set; }
-        public int FoodTypeId { get; set; }
-        public string Name { get; set; }
-        public string description { get; set; }
-        public Decimal Price { get; set; }
-        public string FoodArtUrl { get; set; }
-        public FoodTypeModels FoodType { get; set; }
-
+        [Display(Name ="Food Item")]
+        public virtual int FoodItemModelsId { get; set; }
+        [Display(Name ="Food Type")]
+        public virtual int FoodTypeId { get; set; }
+        public virtual FoodTypeModels FoodType { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string description { get; set; }
+        public virtual decimal Price { get; set; }
+        [Display(Name ="Album Art Url")]
+        public virtual string FoodArtUrl { get; set; }
     }
 }

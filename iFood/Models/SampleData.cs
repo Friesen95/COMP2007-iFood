@@ -6,9 +6,9 @@ using System.Data.Entity;
 
 namespace iFood.Models
 {
-    public class SampleData : DropCreateDatabaseIfModelChanges<restaurantContext>
+    public class SampleData : DropCreateDatabaseIfModelChanges<RestaurantContext>
     {
-         protected override void Seed(restaurantContext context)
+         protected override void Seed(RestaurantContext context)
         {
             var types = new List<FoodTypeModels>
             {
@@ -24,7 +24,6 @@ namespace iFood.Models
                 new FoodItemModels {Name = "Fried Pork Dumplings", description = "Pork, Bacon, cabbage and multiple spices wrapped up in a Dumpling form, served with ponzu dipping souce", Price=10.99M, FoodType= types.Single(g => g.Name == "Appetizer"), FoodArtUrl = "/Content/Images/Fried-Pork-Dumplings.jpg" },
                 new FoodItemModels {Name = "Skillet Chicken and Ravioli", description ="Seasoned chicken  mixed with classic ravioli, mushrooms, tomatoes, and parmesan all stir fryed in a skillet with in house seasoning", Price=23.55M, FoodType= types.Single(g => g.Name == "Main Course"), FoodArtUrl="/Content/Images/Skillet-Ravioli.jpg" },
                 new FoodItemModels {Name = "Tuscan Lemon Chicken", description="A Full Chicken house marinated fire grilled served with grilled lemons and your choice of any house made sides. excluding some of the exclusives marked exl.", Price=27.24M, FoodType= types.Single(g => g.Name == "Main Course"), FoodArtUrl="/Content/Images/Tuscan-Lemon-Chicken.png" }
-
             }.ForEach(a => context.FoodItems.Add(a));
     }
     }
