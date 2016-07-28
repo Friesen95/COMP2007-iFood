@@ -29,5 +29,5 @@ namespace iFood.Models
     }
     }
 }
-//DropCreateDatabaseIfModelChanges
-//DropCreateDatabaseAlways
+//DropCreateDatabaseIfModelChanges, change it back to this when we are done adding sample data
+//DropCreateDatabaseAlways use this if we add more sample data
