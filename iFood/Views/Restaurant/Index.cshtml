@@ -11,12 +11,25 @@
         <p>
             Select from @Model.Count() different Types:
         </p>
-        <ul>
-            @foreach (FoodTypeModels item in Model)
-            {
-                <li>@Html.ActionLink(item.Name, "Browse", new { FoodType = item.Name })</li>
-            }
-        </ul>
+        @*<ul>
+                @foreach (FoodTypeModels item in Model)
+                {
+                    <li>@Html.ActionLink(item.Name, "Browse", new { FoodType = item.Name })</li>
+                }
+            </ul>*@
+
+        @foreach (FoodTypeModels item in Model)
+        {
+            <div class="col-md-4 col-sm-6" onclick="location.href = '@Url.Action("Browse", new { FoodType = item.Name})'">
+                <div class="menu-item">
+                    <h2>@Html.DisplayFor(model => item.Name)</h2>
+                    <img class="menu-item-image" src="@item.imageUrl" />
+                    <p class="form-group">
+                        @item.Description
+                    </p>
+                </div>
+            </div>
+        }
     </div>
 </div>
 

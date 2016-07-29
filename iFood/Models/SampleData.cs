@@ -6,15 +6,15 @@ using System.Data.Entity;
 
 namespace iFood.Models
 {
-    public class SampleData : DropCreateDatabaseIfModelChanges<RestaurantContext>
+    public class SampleData : DropCreateDatabaseAlways<RestaurantContext>
     {
          protected override void Seed(RestaurantContext context)
         {
             var types = new List<FoodTypeModels>
             {
-                new FoodTypeModels { Name = "Appetizer", Description="Something to get your Appetite up"},
-                new FoodTypeModels { Name = "Main Course", Description="The main Course" },
-                new FoodTypeModels { Name = "Desserts", Description="Something sweet that you have at the end." }
+                new FoodTypeModels { Name = "Appetizer", Description="Something to get your Appetite up", imageUrl="/Content/appetizer.jpg"},
+                new FoodTypeModels { Name = "Main Course", Description="The main Course", imageUrl="/Content/mainCourse.jpg"},
+                new FoodTypeModels { Name = "Desserts", Description="Something sweet that you have at the end.", imageUrl="/Content/Dessert.jpg" }
             };
 
             new List<FoodItemModels>
