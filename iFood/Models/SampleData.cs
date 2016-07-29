@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace iFood.Models
 {
-    public class SampleData : DropCreateDatabaseAlways<RestaurantContext>
+    public class SampleData : DropCreateDatabaseIfModelChanges<RestaurantContext>
     {
          protected override void Seed(RestaurantContext context)
         {
