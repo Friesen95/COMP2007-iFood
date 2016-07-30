@@ -1,0 +1,46 @@
+﻿@model IEnumerable<iFood.Models.FoodItemModels>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="padded">
+    <div class="panel-body my-div">
+        <div class="form-group"><a class="btn btn-default btn-lg" href="@Url.Action("Index")">Back</a></div>
+        <h2>Browsing All Types of Food</h2>
+
+        @*<ul>
+                @foreach (FoodItemModels item in Model.FoodItems)
+                {
+                    <li>@Html.ActionLink(item.Name, "Details", new { id = item.FoodItemModelsId })</li>
+                }
+            </ul>*@
+
+        <table class="table table-condensed">
+            <tr>
+                <th> Image </th>
+                <th> Name  </th>
+                <th> Description </th>
+                <th> Price </th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr style="cursor:pointer" onclick="location.href = '@Url.Action("Details", new { id= item.FoodItemModelsId})'">
+
+                    <td><img style="width:50px;height:50px;" src="@item.FoodArtUrl" alt="@item.Name" /></td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+
+                </tr>
+            }
+        </table>
+    </div>
+</div>
