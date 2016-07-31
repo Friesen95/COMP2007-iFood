@@ -9,6 +9,7 @@ using System.Data.Entity;
 
 namespace iFood.Controllers
 {
+    [Authorize]
     public class RestaurantManagerController : Controller
     {
         private RestaurantContext db = new RestaurantContext();
@@ -33,7 +34,7 @@ namespace iFood.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.FoodTypeId = new SelectList(db.FoodTypes, "FoodTypeId", "Name");
+            ViewBag.FoodTypeId = new SelectList(db.FoodTypes, "FoodTypeModelsId", "Name");
             return View();
         }
 
@@ -50,7 +51,7 @@ namespace iFood.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.FoodTypeId = new SelectList(db.FoodTypes, "FoodTypeId", "Name", FoodItem.FoodTypeId);
+            ViewBag.FoodTypeId = new SelectList(db.FoodTypes, "FoodTypeModelsId", "Name", FoodItem.FoodTypeId);
             return View(FoodItem);
         }
 
@@ -60,7 +61,7 @@ namespace iFood.Controllers
         public ActionResult Edit(int id)
         {
             FoodItemModels FoodItem = db.FoodItems.Find(id);
-            ViewBag.FoodTypeId = new SelectList(db.FoodTypes, "FoodTypeId", "Name", FoodItem.FoodTypeId);
+            ViewBag.FoodTypeId = new SelectList(db.FoodTypes, "FoodTypeModelsId", "Name", FoodItem.FoodTypeId);
             return View(FoodItem);
         }
 
@@ -70,13 +71,15 @@ namespace iFood.Controllers
         [HttpPost]
         public ActionResult Edit(FoodItemModels FoodItem)
         {
+
+            FoodItem.FoodType.Name = db.FoodTypes.Find(FoodItem.FoodTypeId).Name;
             if (ModelState.IsValid)
             {
                 db.Entry(FoodItem).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.FoodTypeId = new SelectList(db.FoodTypes, "FoodTypeId", "Name", FoodItem.FoodTypeId);
+            ViewBag.FoodTypeId = new SelectList(db.FoodTypes, "FoodTypeModelsId", "Name", FoodItem.FoodTypeId);
             return View(FoodItem);
         }
 

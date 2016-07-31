@@ -1,0 +1,21 @@
+﻿@using iFood.Models
+@model FoodItemModels
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="padded">
+    <div class="panel-body my-div">
+        <h2>Details</h2>
+        <h2>Food Item: @Model.Name</h2>
+        <div class="col-md-6">
+            <div class="form-group"><label for="Type">Food Type: @Model.FoodType.Name</label></div>
+            <div class="form-group"><label for="Description">Food Description: @Model.description</label></div>
+            <div class="form-group"><label for="Description">Food Price: $@Model.Price</label></div>
+        </div>
+        <div class="col-md-6"><div class="form-group"><img class="menu-image" src="@Model.FoodArtUrl" alt="@Model.Name" /></div></div>
+        <div class="form-group"><a class="btn btn-default" href="@Url.Action("Index")">Back</a></div>
+    </div>
+</div>
+
