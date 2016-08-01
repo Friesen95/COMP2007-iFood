@@ -72,9 +72,10 @@ namespace iFood.Controllers
         public ActionResult Edit(FoodItemModels FoodItem)
         {
 
-            FoodItem.FoodType.Name = db.FoodTypes.Find(FoodItem.FoodTypeId).Name;
+            
             if (ModelState.IsValid)
             {
+                FoodItem.FoodType.Name = db.FoodTypes.Find(FoodItem.FoodTypeId).Name;
                 db.Entry(FoodItem).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

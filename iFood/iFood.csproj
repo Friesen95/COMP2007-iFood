@@ -261,6 +261,7 @@
     <Content Include="Views\RestaurantManager\Details.cshtml" />
     <Content Include="Views\RestaurantManager\Create.cshtml" />
     <Content Include="Views\RestaurantManager\Edit.cshtml" />
+    <Content Include="Views\RestaurantManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
